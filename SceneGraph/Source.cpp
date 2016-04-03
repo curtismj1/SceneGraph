@@ -8,13 +8,12 @@ using glm::vec4;
 using glm::mat4;
 using namespace std;
 
-const int NUM_OF_FILES = 2;
 
 int main(){
 	vector<string> files;
 	files.push_back("scene1.txt");
 	files.push_back("scene2.txt");
 	SceneGraph myGraph(files);
-
+	myGraph.writeLocations();
 	return 0;
 }

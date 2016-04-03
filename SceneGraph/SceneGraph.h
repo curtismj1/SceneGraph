@@ -1,4 +1,5 @@
 #include "glm\gtx\transform.hpp"
+#include "Cube.h"
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -23,4 +24,12 @@ public:
 	float numItems;
 	vector<transNode> transNodes;
 	void writeLocations();
+private:
+	//the cube we will be manipulating
+	cube baseCube;
+	void scale(transNode);
+	void rotate(transNode);
+	void translate(transNode);
+	vector<cube> outCubes;
+	void stackCubes();
 };
